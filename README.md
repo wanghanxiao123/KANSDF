@@ -1,29 +1,9 @@
-***DiGS***: Divergence guided shape implicit neural representation for unoriented point clouds (CVPR 2022)
----
-Created by [Yizhak Ben-Shabat (Itzik)](http://www.itzikbs.com), [Chamin Hewa Koneputugodage]( https://www.linkedin.com/in/chamin-hewa-koneputugodage-b3ba17148/) and [Stephen Gould](http://users.cecs.anu.edu.au/~sgould/) from [ANU](https://www.anu.edu.au/), [Technion](https://www.technion.ac.il/) and [ACRV](https://roboticvision.org/).
+***KANSDF***
+--- 
 
-__[Project page](https://chumbyte.github.io/DiGS-Site/)&nbsp;/ [Arxiv](https://arxiv.org/pdf/2106.10811)&nbsp;/ [Video](https://arxiv.org/pdf/2106.10811)__
-
-<div align="center">
-  <a href="https://www.itzikbs.com/" target="blank">
-    <img src="assets/YizhakBenShabat.jpg" alt="Yizhak Ben-Shabat (Itzik)" style="height:100px;">
-  </a>
-  <a href="https://www.linkedin.com/in/chamin-hewa-koneputugodage-b3ba17148/" target="blank">
-    <img src="assets/ChaminHewa.jpg" alt="Chamin Hewa Koneputugodage" style="height:100px;">
-  </a>
-  <a href="https://cecs.anu.edu.au/people/stephen-gould/" target="blank">
-    <img src="assets/StephenGould.jpg" alt="Stephen Gould" style="height:100px;">
-  </a>
-</div>
-
-![DiGS intuition](assets/digs_teaser_wbg.png)
 
 ## Introduction
-This is the code for training shape implicit neural representations for unoriented 3D point clouds using our divergence constraint and multi-frequency geometric initialization.
-It allows to train, test and evaluate the tasks of surface reconstruction and shape space learning.
-We provide the code for training a new model and test that model on your own data.
-
-Please follow the installation instructions below.
+Based on DiGS
 
 ## Instructions
 
