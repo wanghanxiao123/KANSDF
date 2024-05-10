@@ -1,6 +1,6 @@
 #!/bin/bash
 # run from DiGS/sanitychecks/ , i.e. `./scripts/run_train_test_shape.sh`
-DIGS_DIR=$(dirname $(dirname $(dirname "$(readlink -f "$0")")))  # Should point to your DiGS path
+DIGS_DIR='/data/yssong/DiGS' # Should point to your DiGS path
 echo "If $DIGS_DIR is not the correct path for your DiGS repository, set it manually at the variable DIGS_DIR"
 cd $DIGS_DIR/sanitychecks/ # To call python scripts correctly
 
@@ -39,7 +39,7 @@ NONMNFLD_SAMPLE_TYPE='grid'
 NPOINTS=15000
 ### TRAINING HYPER-PARAMETERS ###
 #################################
-NSAMPLES=10000
+NSAMPLES=1000
 BATCH_SIZE=1
 GPU=0
 NEPOCHS=1
@@ -50,10 +50,10 @@ LR=5e-5
 GRAD_CLIP_NORM=10.0
 ### TESTING ARGUMENTS ###
 #################################
-EPOCHS_N_EVAL=($(seq 0 100 9900)) # use this to generate images of different iterations
+EPOCHS_N_EVAL=($(seq 0 100 1000)) # use this to generate images of different iterations
 # EPOCHS_N_EVAL=(9900)
 
-for SHAPE in 'L' 'snowflake' 'circle'
+for SHAPE in  'L' 'snowflake'
 do
   LOGDIR=${LOGDIRNAME}${NONMNFLD_SAMPLE_TYPE}'_sampling_'${GRID_RES}'/'${SHAPE}'/'${IDENTIFIER}'/'
   python3 train_basic_shape.py --logdir $LOGDIR --shape_type $SHAPE --grid_res $GRID_RES --loss_type $LOSS_TYPE --inter_loss_type 'exp' --num_epochs $NEPOCHS --gpu_idx $GPU --n_samples $NSAMPLES --n_points $NPOINTS --batch_size $BATCH_SIZE --lr ${LR} --nonmnfld_sample_type $NONMNFLD_SAMPLE_TYPE --decoder_n_hidden_layers $LAYERS  --decoder_hidden_dim $DECODER_HIDDEN_DIM --div_decay $DIVDECAY --div_decay_params ${DECAY_PARAMS[@]} --div_type $DIV_TYPE --init_type ${INIT_TYPE} --nl ${NL} --sphere_init_params ${SPHERE_INIT_PARAMS[@]} --loss_weights ${LOSS_WEIGHTS[@]} --grad_clip_norm ${GRAD_CLIP_NORM[@]}

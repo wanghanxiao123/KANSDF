@@ -1,6 +1,9 @@
 # Yizhak Ben-Shabat (Itzik) <sitzikbs@gmail.com>
 # Chamin Hewa Koneputugodage <chamin.hewa@anu.edu.au>
 import os
+# import os
+# from os.path import join, exists
+os.environ["CUDA_VISIBLE_DEVICES"] = "6"#"6,7,8,9,10,11"
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import basic_shape_dataset2d

@@ -16,6 +16,42 @@ from models.torchmeta.modules.container import MetaSequential
 from models.torchmeta.modules.utils import get_subdict
 from collections import OrderedDict
 from models.losses import DiGSLoss
+import torch
+import torch.nn as nn
+
+class ChebyKAN(nn.Module):
+    def __init__(self, in_features, out_features, degree):
+        super(ChebyKAN, self).__init__()
+        assert degree > 0, "Degree of the Chebyshev polynomials must be greater than 0"
+        self.in_features = in_features
+        self.out_features = out_features
+        self.degree = degree
+        std = 1 / (self.in_features * (self.degree + 1))
+        self.coefficients = nn.Parameter(torch.randn(in_features, out_features, self.degree + 1) * std)
+
+    def forward(self, x):
+        # x: (batch_size, in_features)
+        # normalize x between -1 and 1
+        x = torch.tanh(x)
+        # Initialize cheby_values with shape (batch_size, in_features, degree+1)
+        cheby_values = torch.ones(x.size(0), self.in_features, self.degree + 1, device=x.device)
+        cheby_values[:, :, 1] = x
+
+        for i in range(2, self.degree + 1):
+            # Compute next_value using values from cheby_values without in-place operations
+            next_value = 2 * x * cheby_values[:, :, i - 1] - cheby_values[:, :, i - 2]
+            cheby_values = cheby_values.clone()  # Cloning to ensure no in-place modification
+            cheby_values[:, :, i] = next_value
+
+        # cheby_values: (batch_size, in_features, degree+1)
+        # multiply by coefficients (in_features, out_features, degree+1)
+        return torch.einsum('bid,ijd->bj', cheby_values, self.coefficients)
+
+# Example Usage
+# model = ChebyKAN(in_features=128, out_features=64, degree=3)
+# input_tensor = torch.randn(10, 128)  # (batch_size, in_features)
+# output = model(input_tensor)
+# print(output.shape)  # Expected shape: (10, 64)
 
 class Decoder(nn.Module):
 
@@ -66,7 +102,7 @@ class DiGSNetwork(nn.Module):
                 "latent": latent}
 
 
-class FCBlock(MetaModule):
+class FCBlock0(MetaModule):
     '''A fully connected neural network that also allows swapping out the weights when used with a hypernetwork.
     Can be used just as a normal neural network though, as well.
     '''
@@ -133,7 +169,42 @@ class FCBlock(MetaModule):
 
         return output
 
+class FCBlock(MetaModule):
+    '''A fully connected neural network designed to exclusively utilize the ChebyKAN layer for all processing,
+    making it highly specialized for tasks where Chebyshev polynomials are advantageous.
+    '''
 
+    def __init__(self, in_features, out_features, num_hidden_layers, hidden_features, degree=8,outermost_linear=False, nonlinearity='sine', init_type='siren',
+                 sphere_init_params=[1.6,1.0]):
+        # in_features, out_features, num_hidden_layers, hidden_features,
+        #          outermost_linear=False, nonlinearity='sine', init_type='siren',
+        #          sphere_init_params=[1.6,1.0]):
+    # def __init__(self, in_features, out_features, num_hidden_layers, hidden_features,
+    #              outermost_linear=False, nonlinearity='sine', init_type='siren',
+    #              sphere_init_params=[1.6,1.0]):
+        super().__init__()
+        print("Initialising with exclusive use of ChebyKAN layers")
+
+        # Define the sequence of ChebyKAN layers
+        self.net = []
+        # Input to the first ChebyKAN layer
+        self.net.append(ChebyKAN(in_features, hidden_features, degree))
+
+        # Intermediate ChebyKAN layers
+        for _ in range(1, num_hidden_layers - 1):
+            self.net.append(ChebyKAN(hidden_features, hidden_features, degree))
+
+        # Output ChebyKAN layer
+        self.net.append(ChebyKAN(hidden_features, out_features, degree))
+
+        self.net = MetaSequential(*self.net)
+
+    def forward(self, coords, params=None, **kwargs):
+        if params is None:
+            params = OrderedDict(self.named_parameters())
+
+        output = self.net(coords, params=get_subdict(params, 'net'))
+        return output
 class BatchLinear(nn.Linear, MetaModule):
     '''A linear meta-layer that can deal with batched weight matrices and biases, as for instance output by a
     hypernetwork.'''

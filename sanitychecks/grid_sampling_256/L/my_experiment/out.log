@@ -1,0 +1,184 @@
+input params: 
+Namespace(gpu_idx=0, logdir='grid_sampling_256/L/my_experiment/', model_name='SINR_model', seed=3627473, shape_type='L', n_samples=1000, n_point_total=30000, refine_epoch=0, model_dirpath='/mnt/3.5TB_WD/PycharmProjects/ZeroCurlShapes/models', parallel=False, num_epochs=1, lr=5e-05, grad_clip_norm=10.0, batch_size=1, n_points=15000, decoder_hidden_dim=128, encoder_hidden_dim=128, decoder_n_hidden_layers=4, nl='sine', latent_size=0, sphere_init_params=[1.6, 0.1], normalize_normal_loss=False, unsigned_n=True, unsigned_d=False, encoder_type='none', export_vis=False, loss_type='siren_wo_n_w_div', n_loss_type='cos', inter_loss_type='exp', sampler_prob='none', div_type='l1', grid_res=256, div_clamp=50, nonmnfld_sample_type='grid', div_decay='linear', div_decay_params=[100.0, 0.2, 100.0, 0.4, 0.0, 0.0], init_type='mfgi', pt_circle_path='/mnt/IronWolf/logs/DiBS/2D/grid_sampling_256/circle/siren/trained_models/line2d_model_model_9900.pth', loss_weights=[3000.0, 100.0, 100.0, 50.0, 100.0])
+Number of parameters in the current model:298368
+saving model to file :SINR_model_model_0.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 100.0], lr=5.000e-05
+Epoch: 0 [   0/1000 (0%)] Loss: 126.97008 = L_Mnfld: 44.14698 + L_NonMnfld: 22.85031 + L_Nrml: 44.57034 + L_Eknl: 49.97279 + L_Div: 10.00000
+Epoch: 0 [   0/1000 (0%)] Unweighted L_s : L_Mnfld: 0.01472,  L_NonMnfld: 0.22850,  L_Nrml: 0.44570,  L_Eknl: 0.99946,  L_Div: 0.10000
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 100.0], lr=5.000e-05
+Epoch: 0 [  25/1000 (2%)] Loss: 103.34957 = L_Mnfld: 6.17607 + L_NonMnfld: 31.96678 + L_Nrml: 17.00292 + L_Eknl: 48.30671 + L_Div: 16.90000
+Epoch: 0 [  25/1000 (2%)] Unweighted L_s : L_Mnfld: 0.00206,  L_NonMnfld: 0.31967,  L_Nrml: 0.17003,  L_Eknl: 0.96613,  L_Div: 0.16900
+
+saving model to file :SINR_model_model_50.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 100.0], lr=5.000e-05
+Epoch: 0 [  50/1000 (5%)] Loss: 94.24896 = L_Mnfld: 13.00363 + L_NonMnfld: 16.58833 + L_Nrml: 8.40271 + L_Eknl: 47.15732 + L_Div: 17.49967
+Epoch: 0 [  50/1000 (5%)] Unweighted L_s : L_Mnfld: 0.00433,  L_NonMnfld: 0.16588,  L_Nrml: 0.08403,  L_Eknl: 0.94315,  L_Div: 0.17500
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 100.0], lr=5.000e-05
+Epoch: 0 [  75/1000 (8%)] Loss: 84.56961 = L_Mnfld: 6.07558 + L_NonMnfld: 14.75304 + L_Nrml: 7.05388 + L_Eknl: 46.42679 + L_Div: 17.31420
+Epoch: 0 [  75/1000 (8%)] Unweighted L_s : L_Mnfld: 0.00203,  L_NonMnfld: 0.14753,  L_Nrml: 0.07054,  L_Eknl: 0.92854,  L_Div: 0.17314
+
+saving model to file :SINR_model_model_100.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 100.0], lr=5.000e-05
+Epoch: 0 [ 100/1000 (10%)] Loss: 87.08242 = L_Mnfld: 10.63156 + L_NonMnfld: 14.22435 + L_Nrml: 7.11723 + L_Eknl: 46.37327 + L_Div: 15.85324
+Epoch: 0 [ 100/1000 (10%)] Unweighted L_s : L_Mnfld: 0.00354,  L_NonMnfld: 0.14224,  L_Nrml: 0.07117,  L_Eknl: 0.92747,  L_Div: 0.15853
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 100.0], lr=5.000e-05
+Epoch: 0 [ 125/1000 (12%)] Loss: 92.97222 = L_Mnfld: 16.88871 + L_NonMnfld: 13.25944 + L_Nrml: 7.36975 + L_Eknl: 45.55142 + L_Div: 17.27265
+Epoch: 0 [ 125/1000 (12%)] Unweighted L_s : L_Mnfld: 0.00563,  L_NonMnfld: 0.13259,  L_Nrml: 0.07370,  L_Eknl: 0.91103,  L_Div: 0.17273
+
+saving model to file :SINR_model_model_150.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 100.0], lr=5.000e-05
+Epoch: 0 [ 150/1000 (15%)] Loss: 84.74604 = L_Mnfld: 9.63429 + L_NonMnfld: 12.33129 + L_Nrml: 6.81867 + L_Eknl: 45.27408 + L_Div: 17.50638
+Epoch: 0 [ 150/1000 (15%)] Unweighted L_s : L_Mnfld: 0.00321,  L_NonMnfld: 0.12331,  L_Nrml: 0.06819,  L_Eknl: 0.90548,  L_Div: 0.17506
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 100.0], lr=5.000e-05
+Epoch: 0 [ 175/1000 (18%)] Loss: 95.42517 = L_Mnfld: 19.51280 + L_NonMnfld: 12.96192 + L_Nrml: 6.47283 + L_Eknl: 44.96878 + L_Div: 17.98167
+Epoch: 0 [ 175/1000 (18%)] Unweighted L_s : L_Mnfld: 0.00650,  L_NonMnfld: 0.12962,  L_Nrml: 0.06473,  L_Eknl: 0.89938,  L_Div: 0.17982
+
+saving model to file :SINR_model_model_200.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 100.0], lr=5.000e-05
+Epoch: 0 [ 200/1000 (20%)] Loss: 81.78160 = L_Mnfld: 7.78043 + L_NonMnfld: 11.61424 + L_Nrml: 6.72814 + L_Eknl: 44.91848 + L_Div: 17.46845
+Epoch: 0 [ 200/1000 (20%)] Unweighted L_s : L_Mnfld: 0.00259,  L_NonMnfld: 0.11614,  L_Nrml: 0.06728,  L_Eknl: 0.89837,  L_Div: 0.17468
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 88.0], lr=5.000e-05
+Epoch: 0 [ 225/1000 (22%)] Loss: 81.10799 = L_Mnfld: 9.86310 + L_NonMnfld: 9.51820 + L_Nrml: 6.69027 + L_Eknl: 43.83766 + L_Div: 17.88903
+Epoch: 0 [ 225/1000 (22%)] Unweighted L_s : L_Mnfld: 0.00329,  L_NonMnfld: 0.09518,  L_Nrml: 0.06690,  L_Eknl: 0.87675,  L_Div: 0.20328
+
+saving model to file :SINR_model_model_250.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 75.5], lr=5.000e-05
+Epoch: 0 [ 250/1000 (25%)] Loss: 75.35516 = L_Mnfld: 6.55529 + L_NonMnfld: 9.66586 + L_Nrml: 6.07883 + L_Eknl: 44.06996 + L_Div: 15.06404
+Epoch: 0 [ 250/1000 (25%)] Unweighted L_s : L_Mnfld: 0.00219,  L_NonMnfld: 0.09666,  L_Nrml: 0.06079,  L_Eknl: 0.88140,  L_Div: 0.19952
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 62.99999999999999], lr=5.000e-05
+Epoch: 0 [ 275/1000 (28%)] Loss: 79.10291 = L_Mnfld: 12.66320 + L_NonMnfld: 9.66090 + L_Nrml: 5.72378 + L_Eknl: 43.90619 + L_Div: 12.87263
+Epoch: 0 [ 275/1000 (28%)] Unweighted L_s : L_Mnfld: 0.00422,  L_NonMnfld: 0.09661,  L_Nrml: 0.05724,  L_Eknl: 0.87812,  L_Div: 0.20433
+
+saving model to file :SINR_model_model_300.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 50.50000000000001], lr=5.000e-05
+Epoch: 0 [ 300/1000 (30%)] Loss: 74.73108 = L_Mnfld: 11.57325 + L_NonMnfld: 8.33533 + L_Nrml: 5.29068 + L_Eknl: 42.78229 + L_Div: 12.04021
+Epoch: 0 [ 300/1000 (30%)] Unweighted L_s : L_Mnfld: 0.00386,  L_NonMnfld: 0.08335,  L_Nrml: 0.05291,  L_Eknl: 0.85565,  L_Div: 0.23842
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 38.0], lr=5.000e-05
+Epoch: 0 [ 325/1000 (32%)] Loss: 73.55019 = L_Mnfld: 14.20949 + L_NonMnfld: 6.71340 + L_Nrml: 5.69520 + L_Eknl: 41.85595 + L_Div: 10.77134
+Epoch: 0 [ 325/1000 (32%)] Unweighted L_s : L_Mnfld: 0.00474,  L_NonMnfld: 0.06713,  L_Nrml: 0.05695,  L_Eknl: 0.83712,  L_Div: 0.28346
+
+saving model to file :SINR_model_model_350.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 25.500000000000014], lr=5.000e-05
+Epoch: 0 [ 350/1000 (35%)] Loss: 84.26671 = L_Mnfld: 27.69541 + L_NonMnfld: 7.60492 + L_Nrml: 4.99271 + L_Eknl: 42.55233 + L_Div: 6.41405
+Epoch: 0 [ 350/1000 (35%)] Unweighted L_s : L_Mnfld: 0.00923,  L_NonMnfld: 0.07605,  L_Nrml: 0.04993,  L_Eknl: 0.85105,  L_Div: 0.25153
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 13.000000000000014], lr=5.000e-05
+Epoch: 0 [ 375/1000 (38%)] Loss: 70.95822 = L_Mnfld: 20.81289 + L_NonMnfld: 5.62614 + L_Nrml: 5.31293 + L_Eknl: 40.02359 + L_Div: 4.49560
+Epoch: 0 [ 375/1000 (38%)] Unweighted L_s : L_Mnfld: 0.00694,  L_NonMnfld: 0.05626,  L_Nrml: 0.05313,  L_Eknl: 0.80047,  L_Div: 0.34582
+
+saving model to file :SINR_model_model_400.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.5], lr=5.000e-05
+Epoch: 0 [ 400/1000 (40%)] Loss: 70.98977 = L_Mnfld: 31.40464 + L_NonMnfld: 3.59752 + L_Nrml: 4.68496 + L_Eknl: 35.70932 + L_Div: 0.27829
+Epoch: 0 [ 400/1000 (40%)] Unweighted L_s : L_Mnfld: 0.01047,  L_NonMnfld: 0.03598,  L_Nrml: 0.04685,  L_Eknl: 0.71419,  L_Div: 0.55657
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 425/1000 (42%)] Loss: 50.45050 = L_Mnfld: 10.64754 + L_NonMnfld: 3.75697 + L_Nrml: 4.51213 + L_Eknl: 36.04600 + L_Div: 0.00000
+Epoch: 0 [ 425/1000 (42%)] Unweighted L_s : L_Mnfld: 0.00355,  L_NonMnfld: 0.03757,  L_Nrml: 0.04512,  L_Eknl: 0.72092,  L_Div: 0.69109
+
+saving model to file :SINR_model_model_450.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 450/1000 (45%)] Loss: 50.51022 = L_Mnfld: 16.10289 + L_NonMnfld: 2.55852 + L_Nrml: 4.58415 + L_Eknl: 31.84881 + L_Div: 0.00000
+Epoch: 0 [ 450/1000 (45%)] Unweighted L_s : L_Mnfld: 0.00537,  L_NonMnfld: 0.02559,  L_Nrml: 0.04584,  L_Eknl: 0.63698,  L_Div: 0.96831
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 475/1000 (48%)] Loss: 44.98260 = L_Mnfld: 16.93618 + L_NonMnfld: 1.89013 + L_Nrml: 4.29741 + L_Eknl: 26.15630 + L_Div: 0.00000
+Epoch: 0 [ 475/1000 (48%)] Unweighted L_s : L_Mnfld: 0.00565,  L_NonMnfld: 0.01890,  L_Nrml: 0.04297,  L_Eknl: 0.52313,  L_Div: 1.36227
+
+saving model to file :SINR_model_model_500.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 500/1000 (50%)] Loss: 47.93159 = L_Mnfld: 24.83088 + L_NonMnfld: 1.73879 + L_Nrml: 3.96265 + L_Eknl: 21.36192 + L_Div: 0.00000
+Epoch: 0 [ 500/1000 (50%)] Unweighted L_s : L_Mnfld: 0.00828,  L_NonMnfld: 0.01739,  L_Nrml: 0.03963,  L_Eknl: 0.42724,  L_Div: 1.69266
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 525/1000 (52%)] Loss: 37.06672 = L_Mnfld: 14.62742 + L_NonMnfld: 1.76515 + L_Nrml: 3.59673 + L_Eknl: 20.67414 + L_Div: 0.00000
+Epoch: 0 [ 525/1000 (52%)] Unweighted L_s : L_Mnfld: 0.00488,  L_NonMnfld: 0.01765,  L_Nrml: 0.03597,  L_Eknl: 0.41348,  L_Div: 1.80884
+
+saving model to file :SINR_model_model_550.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 550/1000 (55%)] Loss: 52.93757 = L_Mnfld: 30.09558 + L_NonMnfld: 2.03062 + L_Nrml: 3.59612 + L_Eknl: 20.81138 + L_Div: 0.00000
+Epoch: 0 [ 550/1000 (55%)] Unweighted L_s : L_Mnfld: 0.01003,  L_NonMnfld: 0.02031,  L_Nrml: 0.03596,  L_Eknl: 0.41623,  L_Div: 2.00887
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 575/1000 (58%)] Loss: 34.26955 = L_Mnfld: 12.08674 + L_NonMnfld: 1.93115 + L_Nrml: 3.34348 + L_Eknl: 20.25166 + L_Div: 0.00000
+Epoch: 0 [ 575/1000 (58%)] Unweighted L_s : L_Mnfld: 0.00403,  L_NonMnfld: 0.01931,  L_Nrml: 0.03343,  L_Eknl: 0.40503,  L_Div: 2.30494
+
+saving model to file :SINR_model_model_600.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 600/1000 (60%)] Loss: 33.56400 = L_Mnfld: 13.41088 + L_NonMnfld: 1.69358 + L_Nrml: 2.46686 + L_Eknl: 18.45954 + L_Div: 0.00000
+Epoch: 0 [ 600/1000 (60%)] Unweighted L_s : L_Mnfld: 0.00447,  L_NonMnfld: 0.01694,  L_Nrml: 0.02467,  L_Eknl: 0.36919,  L_Div: 2.68552
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 625/1000 (62%)] Loss: 54.21515 = L_Mnfld: 35.09821 + L_NonMnfld: 1.65705 + L_Nrml: 2.13827 + L_Eknl: 17.45989 + L_Div: 0.00000
+Epoch: 0 [ 625/1000 (62%)] Unweighted L_s : L_Mnfld: 0.01170,  L_NonMnfld: 0.01657,  L_Nrml: 0.02138,  L_Eknl: 0.34920,  L_Div: 3.17156
+
+saving model to file :SINR_model_model_650.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 650/1000 (65%)] Loss: 36.61338 = L_Mnfld: 17.66974 + L_NonMnfld: 2.06090 + L_Nrml: 2.07438 + L_Eknl: 16.88275 + L_Div: 0.00000
+Epoch: 0 [ 650/1000 (65%)] Unweighted L_s : L_Mnfld: 0.00589,  L_NonMnfld: 0.02061,  L_Nrml: 0.02074,  L_Eknl: 0.33765,  L_Div: 3.67705
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 675/1000 (68%)] Loss: 37.02048 = L_Mnfld: 21.20040 + L_NonMnfld: 1.80676 + L_Nrml: 2.48824 + L_Eknl: 14.01333 + L_Div: 0.00000
+Epoch: 0 [ 675/1000 (68%)] Unweighted L_s : L_Mnfld: 0.00707,  L_NonMnfld: 0.01807,  L_Nrml: 0.02488,  L_Eknl: 0.28027,  L_Div: 4.09427
+
+saving model to file :SINR_model_model_700.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 700/1000 (70%)] Loss: 33.80004 = L_Mnfld: 19.09828 + L_NonMnfld: 1.66956 + L_Nrml: 2.49718 + L_Eknl: 13.03220 + L_Div: 0.00000
+Epoch: 0 [ 700/1000 (70%)] Unweighted L_s : L_Mnfld: 0.00637,  L_NonMnfld: 0.01670,  L_Nrml: 0.02497,  L_Eknl: 0.26064,  L_Div: 4.31879
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 725/1000 (72%)] Loss: 38.64490 = L_Mnfld: 24.25446 + L_NonMnfld: 1.73390 + L_Nrml: 1.85272 + L_Eknl: 12.65654 + L_Div: 0.00000
+Epoch: 0 [ 725/1000 (72%)] Unweighted L_s : L_Mnfld: 0.00808,  L_NonMnfld: 0.01734,  L_Nrml: 0.01853,  L_Eknl: 0.25313,  L_Div: 4.37013
+
+saving model to file :SINR_model_model_750.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 750/1000 (75%)] Loss: 25.53155 = L_Mnfld: 11.79966 + L_NonMnfld: 1.70419 + L_Nrml: 1.98195 + L_Eknl: 12.02769 + L_Div: 0.00000
+Epoch: 0 [ 750/1000 (75%)] Unweighted L_s : L_Mnfld: 0.00393,  L_NonMnfld: 0.01704,  L_Nrml: 0.01982,  L_Eknl: 0.24055,  L_Div: 4.43488
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 775/1000 (78%)] Loss: 29.44237 = L_Mnfld: 17.28088 + L_NonMnfld: 1.62822 + L_Nrml: 1.91426 + L_Eknl: 10.53327 + L_Div: 0.00000
+Epoch: 0 [ 775/1000 (78%)] Unweighted L_s : L_Mnfld: 0.00576,  L_NonMnfld: 0.01628,  L_Nrml: 0.01914,  L_Eknl: 0.21067,  L_Div: 4.59841
+
+saving model to file :SINR_model_model_800.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 800/1000 (80%)] Loss: 25.85511 = L_Mnfld: 13.58637 + L_NonMnfld: 1.79465 + L_Nrml: 1.89314 + L_Eknl: 10.47409 + L_Div: 0.00000
+Epoch: 0 [ 800/1000 (80%)] Unweighted L_s : L_Mnfld: 0.00453,  L_NonMnfld: 0.01795,  L_Nrml: 0.01893,  L_Eknl: 0.20948,  L_Div: 4.50919
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 825/1000 (82%)] Loss: 18.40546 = L_Mnfld: 6.79831 + L_NonMnfld: 1.69795 + L_Nrml: 1.61545 + L_Eknl: 9.90921 + L_Div: 0.00000
+Epoch: 0 [ 825/1000 (82%)] Unweighted L_s : L_Mnfld: 0.00227,  L_NonMnfld: 0.01698,  L_Nrml: 0.01615,  L_Eknl: 0.19818,  L_Div: 4.59772
+
+saving model to file :SINR_model_model_850.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 850/1000 (85%)] Loss: 19.34601 = L_Mnfld: 8.24659 + L_NonMnfld: 1.59848 + L_Nrml: 1.49178 + L_Eknl: 9.50094 + L_Div: 0.00000
+Epoch: 0 [ 850/1000 (85%)] Unweighted L_s : L_Mnfld: 0.00275,  L_NonMnfld: 0.01598,  L_Nrml: 0.01492,  L_Eknl: 0.19002,  L_Div: 4.58275
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 875/1000 (88%)] Loss: 32.44721 = L_Mnfld: 20.79182 + L_NonMnfld: 1.67549 + L_Nrml: 1.78288 + L_Eknl: 9.97990 + L_Div: 0.00000
+Epoch: 0 [ 875/1000 (88%)] Unweighted L_s : L_Mnfld: 0.00693,  L_NonMnfld: 0.01675,  L_Nrml: 0.01783,  L_Eknl: 0.19960,  L_Div: 4.53600
+
+saving model to file :SINR_model_model_900.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 900/1000 (90%)] Loss: 22.86598 = L_Mnfld: 13.62536 + L_NonMnfld: 1.40581 + L_Nrml: 1.51234 + L_Eknl: 7.83481 + L_Div: 0.00000
+Epoch: 0 [ 900/1000 (90%)] Unweighted L_s : L_Mnfld: 0.00454,  L_NonMnfld: 0.01406,  L_Nrml: 0.01512,  L_Eknl: 0.15670,  L_Div: 4.70974
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 925/1000 (92%)] Loss: 29.29811 = L_Mnfld: 20.11227 + L_NonMnfld: 1.47043 + L_Nrml: 1.41588 + L_Eknl: 7.71540 + L_Div: 0.00000
+Epoch: 0 [ 925/1000 (92%)] Unweighted L_s : L_Mnfld: 0.00670,  L_NonMnfld: 0.01470,  L_Nrml: 0.01416,  L_Eknl: 0.15431,  L_Div: 4.82543
+
+saving model to file :SINR_model_model_950.pth
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 950/1000 (95%)] Loss: 21.80276 = L_Mnfld: 12.74902 + L_NonMnfld: 1.59647 + L_Nrml: 1.33053 + L_Eknl: 7.45727 + L_Div: 0.00000
+Epoch: 0 [ 950/1000 (95%)] Unweighted L_s : L_Mnfld: 0.00425,  L_NonMnfld: 0.01596,  L_Nrml: 0.01331,  L_Eknl: 0.14915,  L_Div: 4.78394
+
+Weights: [3000.0, 100.0, 100.0, 50.0, 0.0], lr=5.000e-05
+Epoch: 0 [ 975/1000 (98%)] Loss: 24.42950 = L_Mnfld: 15.71222 + L_NonMnfld: 1.67940 + L_Nrml: 1.37910 + L_Eknl: 7.03788 + L_Div: 0.00000
+Epoch: 0 [ 975/1000 (98%)] Unweighted L_s : L_Mnfld: 0.00524,  L_NonMnfld: 0.01679,  L_Nrml: 0.01379,  L_Eknl: 0.14076,  L_Div: 4.89514
+
+saving model to file :SINR_model_model_1000.pth
